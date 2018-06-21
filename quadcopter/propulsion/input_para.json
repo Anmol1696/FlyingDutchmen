@@ -1,10 +1,10 @@
 {
     "m" : 6.96,
     "g" : 9.8,
-    "rho" : 1.125,
+    "rho" : 1.225,
     "s" : 0.5,
     "cd" : 1.28,
     "num_rotors" : 4.0,
     "inch_to_meter" : 0.0254,
-    "max_size_in_inches" : 500
+    "max_size_in_inches" : 50
 }
