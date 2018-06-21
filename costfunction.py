@@ -7,7 +7,7 @@ import math
 def get_number_of_rounds(range_diameter, height_of_operration, field_angle):
     return math.ceil(range_diameter/(2.0*height_of_operration*math.tan(field_angle*math.pi/(2.0*180.0))))
 
-def exploration_phase(num_of_rounds, height_of_operration, field_angle, velocity):
+def time_calculation(num_of_rounds, height_of_operration, field_angle, velocity):
     """
         Returns the cost function value for the exploration phase
         This minimizes the time taken for exploration
@@ -21,6 +21,10 @@ def exploration_phase(num_of_rounds, height_of_operration, field_angle, velocity
 
     return final_result
 
+def exploration_phase_cost(range_diameter, height_of_operration, field_angle, velocity):
+    number_of_rounds = int(get_number_of_rounds)
+    return time_calculation(number_of_rounds, height_of_operration, field_angle, velocity)
+
 if __name__ == "__main__":
     """
         Testing above functions
@@ -31,7 +35,7 @@ if __name__ == "__main__":
     velocity = 10
 
     number_of_rounds = int(get_number_of_rounds(range_diameter, height_of_operration, field_angle))
-    result = exploration_phase(number_of_rounds, height_of_operration, field_angle, velocity)
+    result = time_calculation(number_of_rounds, height_of_operration, field_angle, velocity)
 
     print 'Number of rounds ->', number_of_rounds
     print 'Cost function value ->', (result)/(60*60.0)
