@@ -14,7 +14,7 @@ def get_height_of_platform(horizontal_velocity, platform_angle, g=9.8):
     angles_velocity = horizontal_velocity/math.cos(platform_angle*math.pi/180.0)
     return (7.0*angles_velocity**2)/(10.0*g)
 
-def main_platform(fishnet_area, height_of_operation, g=9.8):
+def main_platform(fishnet_area, height_of_operation=25, g=9.8):
     """
         This is the ouput that gives all the outputs
     """

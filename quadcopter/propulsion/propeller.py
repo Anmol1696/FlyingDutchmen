@@ -32,10 +32,9 @@ def form_optimal_csv_file(rawdata_frame, output_filename, parameter_filename, co
     final_dataframe = pandas.DataFrame.from_records(final_list, columns=columns)
     final_dataframe.to_csv(output_filename, index=False)
 
-if __name__ == "__main__":
+def fixing_propeller(input_data, parameter_filename):
     raw_csv_file = "quadcopter/propulsion/data/raw_data.csv"
     output_filename = "quadcopter/propulsion/processed_data/optimal_data.csv"
-    parameter_filename = "input_para.json"
     columns = ['d', 'pitch', 'omega', 'velocity', 'power', 'j', 'ct', 'cp', 'eta', 'company']
     df = read_data(raw_csv_file)
     form_optimal_csv_file(df, output_filename, parameter_filename, columns)

@@ -1,0 +1,9 @@
+{
+    "weight" : 6.682,
+    "max_arm_length" : 500,
+    "hovering_velocity" : 10,
+    "height_of_hover" : 15,
+    "feild_view" : 120,
+    "fraction_area" : 0.5,
+    "height_of_net_deplovment" : 25
+}
